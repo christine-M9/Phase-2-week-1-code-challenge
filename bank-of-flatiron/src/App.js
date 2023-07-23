@@ -5,18 +5,23 @@ const App = () => {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    // Fetch data from db.json using fetch
-    fetch("db.json")
+    // Fetching data from db.json using fetch
+    fetch('/db.json')
       .then((response) => response.json())
       .then((data) => setTransactions(data.transactions))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
+// adding a new transaction
+  const addTransaction = (newTransaction) => {
+  
+  };
+
   return (
     <div>
       <h1>My Transactions</h1>
       {transactions.length > 0 ? (
-        <TransactionTable transactions={transactions} />
+        <TransactionTable transactions={transactions} onAddTransaction={addTransaction} />
       ) : (
         <p>Loading...</p>
       )}
