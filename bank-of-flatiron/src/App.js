@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import TransactionTable from './TransactionTable';
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
 
   useEffect(() => {
-    // Fetch data from db.json using axios
-    axios.get('/db.json')
-      .then((response) => setTransactions(response.data.transactions))
+    // Fetch data from db.json using fetch
+    fetch("db.json")
+      .then((response) => response.json())
+      .then((data) => setTransactions(data.transactions))
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
