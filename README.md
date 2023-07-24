@@ -6,7 +6,7 @@
 
 This web application demonstrates a data React application that displays a list of my recent bank transactions, among other features 
 
-such as adding a new transaction to the existing.
+such as adding a new transaction to the existing though it wont persist.
 
 
   ## Requirements
