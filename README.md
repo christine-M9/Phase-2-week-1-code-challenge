@@ -6,7 +6,9 @@
 
 This web application demonstrates a data React application that displays a list of my recent bank transactions, among other features 
 
-such as adding a new transaction to the existing though it wont persist.
+such as adding a new transaction to the existing though it wont persist, and one can Filter transactions by typing into the search bar. Only 
+
+transactions with a description matching the search term is transactions table.
 
 
   ## Requirements

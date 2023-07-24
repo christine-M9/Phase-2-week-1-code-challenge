@@ -8,6 +8,8 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
     amount: '',
   });
 
+  const [searchWord, setSearchWord] = useState('');
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -27,9 +29,28 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
     });
   };
 
+  const handleSearch = (event) => {
+    setSearchWord(event.target.value);
+  };
+
+  const filteredTransactions = transactions.filter((transaction) =>
+    transaction.description.toLowerCase().includes(searchWord.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Transaction Table</h2>
+      <div>
+        <label>
+          Search Transactions:
+          <input
+            type="text"
+            value={searchWord}
+            onChange={handleSearch}
+            placeholder="Search by description..."
+          />
+        </label>
+      </div>
       <table>
         <thead>
           <tr>
@@ -41,7 +62,7 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
           </tr>
         </thead>
         <tbody>
-          {transactions.map((transaction) => (
+          {filteredTransactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.id}</td>
               <td>{transaction.date}</td>
@@ -69,7 +90,7 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
         </label>
         <label>
           Amount:
-          <input type="number" name="amount"  value={formData.amount} onChange={handleInputChange} required />
+          <input type="number" name="amount" value={formData.amount} onChange={handleInputChange} required />
         </label>
         <button type="submit">Add Transaction</button>
       </form>
@@ -78,3 +99,5 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
 };
 
 export default TransactionTable;
+
+     
