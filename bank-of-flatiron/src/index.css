@@ -20,4 +20,20 @@
   th {
     background-color: #7fd082;
   }
-  
+  /* add new transaction form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  input[type="date"],
+  input[type="text"],
+  input[type="number"] {
+  padding: 8px;
+  margin-bottom: 12px;
+ }
+   button {
+    padding: 6px;
+   
+  }  

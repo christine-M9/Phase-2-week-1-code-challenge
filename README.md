@@ -60,6 +60,8 @@ Ensure that you have;
 
  2. Javascript.
 
+ 3. CSS.
+
 
  ## License
 
