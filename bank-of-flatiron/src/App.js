@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>My Transactions</h1>
+      <h1>MY TRANSACTIONS</h1>
       {transactions.length > 0 ? (
         <TransactionTable transactions={transactions} onAddTransaction={addTransaction} />
       ) : (
