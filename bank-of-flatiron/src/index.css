@@ -13,12 +13,12 @@
   
   th, td {
     padding: 8px;
-    border-bottom: 1px solid #918f8f;
+    border-bottom: 1px solid #35c844;
     text-align: left;
   }
   
   th {
-    background-color: #7fd082;
+    background-color: #5dc560;
   }
   /* add new transaction form styling */
   form {
@@ -31,7 +31,7 @@
   input[type="text"],
   input[type="number"] {
   padding: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
  }
    button {
     padding: 6px;
