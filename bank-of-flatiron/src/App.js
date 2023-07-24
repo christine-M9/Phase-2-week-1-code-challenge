@@ -12,9 +12,18 @@ const App = () => {
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
-// adding a new transaction
   const addTransaction = (newTransaction) => {
-  
+    // creating a new ID for the transaction
+    const newId = transactions.length + 1;
+
+    // Creating new transaction object with new ID
+    const transactionToAdd = {
+      id: newId,
+      ...newTransaction,
+    };
+
+    // Adding new transaction to the state
+    setTransactions((prevTransactions) => [...prevTransactions, transactionToAdd]);
   };
 
   return (

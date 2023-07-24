@@ -55,7 +55,22 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
 
       <h2>Add New Transaction</h2>
       <form onSubmit={handleSubmit}>
-      
+        <label>
+          Date:
+          <input type="date" name="date" value={formData.date} onChange={handleInputChange} required />
+        </label>
+        <label>
+          Description:
+          <input type="text" name="description" value={formData.description} onChange={handleInputChange} required />
+        </label>
+        <label>
+          Category:
+          <input type="text" name="category" value={formData.category} onChange={handleInputChange} required />
+        </label>
+        <label>
+          Amount:
+          <input type="number" name="amount"  value={formData.amount} onChange={handleInputChange} required />
+        </label>
         <button type="submit">Add Transaction</button>
       </form>
     </div>
