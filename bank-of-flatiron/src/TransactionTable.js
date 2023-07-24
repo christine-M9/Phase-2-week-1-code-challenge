@@ -92,7 +92,7 @@ const TransactionTable = ({ transactions, onAddTransaction }) => {
           Amount:
           <input type="number" name="amount" value={formData.amount} onChange={handleInputChange} required />
         </label>
-        <button type="submit">Add Transaction</button>
+        <button type="submit">Click to Add Transaction</button>
       </form>
     </div>
   );
